@@ -7,8 +7,9 @@ valor*/
 
 int main(){
     int num[20];
-    int max = num[0];
-    int min = num[0];
+    int max;
+    int min;
+   
     for(int i = 0; i < 20; i++){
         printf("ingrese un numero [%d]: ", i+1);
         scanf("%d", &num[i]);
