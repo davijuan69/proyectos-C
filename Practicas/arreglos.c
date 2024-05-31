@@ -2,23 +2,28 @@
 
 // EDADES
 
-/*
+void imprimirEdades(int edades[], int cantidad){
+     int i;
 
-int main(){
-    int i, edades[8];
-
-    for(i = 0; i < 8; i++){
+    for(i = 0; i < cantidad; i++){
         printf("ingrese una edad: ");
         scanf("%d", &edades[i]);
     }
 
-    for(i = 0; i < 8; i++){
+    for(i = 0; i < cantidad; i++){
         printf("edades[%i] = %i\n", i, edades[i]);
     }
 
+}
+
+
+int main(){
+    int edades[8];
+    imprimirEdades(edades, 8);
+   
     return 0;
 }
-*/
+
 
 // TEMPERATURA_HORA
 
