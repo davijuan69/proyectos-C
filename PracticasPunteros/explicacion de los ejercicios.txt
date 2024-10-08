@@ -1,0 +1,67 @@
+Ejercicio 1:
+
+x = *px; Si funciona porque el puntero le para el valor que tiene dentro.
+
+*px = x; Si funciona porque x le esta asignando su valoir al puntero
+
+px = &x; Si funciona porque el puntero guarda la direccion de memoria de x
+
+&x = px; No funciona porque no le puedes pasar nada a la direccion de x
+
+&(x+1) = x; No funciona porque la direccion de x+1 no existe
+
+&(x)+1 = x; No funciona porque no es un valor modificable
+
+*(&(x+1)) = x; No funciona porque la direccion de x+1 no existe
+
+*(&(x)+1) = x; Si funciona porque si hay una direccion de x
+
+x = a; No funciona porque un float no puede tener como valor un array
+
+x = a[0]; si funciona porque existe la posibilidad de que en la posicion 0 sea un float
+
+x = *(a[1]); No funcionan porque el puntero no accede a la direccion del array
+
+x = (*a)[2]; el puntero no esta accediendo al valor de a
+
+x = a[3+1]; Si funciona porque le estas pasando a x el valor que esta en la posicion 3+1
+
+x = a[3]+1; Si funciona, le estas sumando 1 al valor que esta en 3
+
+x = &((a[3])+1); No
+
+x = &(a[3])+1; No
+
+x = *(&(a[3])+1); Si funciona porque
+
+px = a; Si funciona porque le estas pasando al puntero la direccion del primer numero del array
+
+px = a[0]; No funciona porque le estas pasando a un numero al puntero y eso no se puede
+
+px = &(a[4]); Si funciona porque le estas pasando la direccion de memoria de la posicion 4
+
+Ejercicio 2:
+
+el string1 es un array de caracter 12, por lo que devuelve 12
+el string2 devuelve el tamaño de la cadena mas el caracter nulo 
+el *string3 devuelve el tamaño de string3 en bytes, en este caso 8 (dependiendo si el sistema es de 64 o 32 ese tamaño puede cambiar)
+el *ap_string es un array de tres punteros a caracteres, por lo que se multiplica los 8bytes por el numero de el los tres punteros, 3 * 8 = 24
+el abc[][6] es un array bidimensional por lo que un sub-array tiene tamaño 6 y el otro hay 3 sub-arrays, multiplica esos dos para que de 18 
+
+ejercicio 3: 
+
+la ventaja es que tiene mayor eficiencia y te ayuda a ahorrar lineas de codigo gracias a las direcciones de memoria.
+
+ejercicio 4.
+
+1. calcula la longitud de la cadena haciendo que p apunte a la misma direccion que s, resta la dirección inicial de la cadena s de la dirección actual p. 
+La diferencia es el número de caracteres entre s y p, que es la longitud de la cadena.
+
+2. copia una cadena de caracter, f como la fuente y d como el destino. copia el caracter que esta apuntado por f y lo pasa al lugar donde apunta d. El bucle continua hasta que aparezca '\0'
+
+3. concatena dos arrays usando las dos anteriores, primero lee d hasta el caracter '\0' luego copia f donde apunta d, en este el caso d apunta a '\0'
+
+4. hace una copia dinamica, desocupando espacio en la memoria para la cadena f +1 para contar el caracter nulo, luego copias f en d usando la funcion de my_strcpy
+
+5.  Busca la primera aparición de s1 dentro de s2. La función devuelve el índice de la primera aparición. Si s1 no se encuentra dentro de s2, la función devuelve -1.
+
