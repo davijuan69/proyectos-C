@@ -1,0 +1,6 @@
+responda:   
+
+¿Cuál es la diferencia entre un paso de parámetros por valor y uno por
+referencia?
+
+    en un parametro por valor se pasa una copia del valor mientras que en referencia se pasa una referencia (punteros)
